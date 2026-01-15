@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { 
-  MessageSquare, 
+import { useState, useEffect, useRef } from 'react';
+import {  
   FileText, 
   Mail, 
   Users, 
@@ -12,14 +11,12 @@ import {
   Bot,
   ChevronRight,
   Shield,
-  Loader2,
-  X
+  Loader2
 } from 'lucide-react';
 
 // --- Types & Mock Data ---
 
 type AppState = 'email_view' | 'drafting_view' | 'teams_approval_view';
-type AgentState = 'idle' | 'analyzing' | 'fetching_data' | 'drafting' | 'awaiting_approval';
 
 interface Message {
   id: string;
@@ -36,13 +33,7 @@ interface AgentAction {
   details?: string;
 }
 
-const CRM_DATA = {
-  client: "Acme Corp",
-  dealSize: "$150k",
-  products: ["Enterprise License x500", "Premium Support"],
-  status: "Qualified Opportunity",
-  lastInteraction: "2 days ago"
-};
+
 
 const POLICY_DATA = {
   maxDiscountAuto: 15,
